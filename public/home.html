@@ -1,0 +1,49 @@
+<br>
+<div class="container">
+    <div class="row justify-content-md-center title align-items-center"  >	
+        <a class="col col-lg-2" ng-href="edit/add"><h5>写博客</h5></a>
+        <h3 class="col-md-auto">
+        PapaBlog
+        </h3>
+        <a class="col col-lg-2" ng-href="profile"><h5>个人博客</h5></a>
+    </div>
+    <hr>
+    <div class="row form-group login h5" ng-controller="loginCtrl" >
+        <div class="col-8 bg-dark text-white rounded"></div>
+        <div class="col-4 " ng-show="userislogin">
+        	<form name="loginform" class="form-horizontal" novalidate>
+                 用户名<input class="form-control" name="id" ng-change="isRegister()" type="text" ng-model="user.id" >
+                 密码<input class="form-control" name="pw" type="password" ng-model="user.pw" ><br/>
+                 <button type="submit" class="btn btn-primary"  ng-click="login()">{{btnlogin}}</button>
+            </form>
+        </div>
+        <div class="col-4 align-self-center " ng-hide="userislogin">
+            {{userLogin}},你好<br/><br/>
+            <button type="button" class="btn btn-primary" ng-click="grxx()">个人空间</button>
+            <button type="button" class="btn btn-primary" ng-click="zc()">注销</button>
+        </div>
+    </div>
+    <hr>
+    <div ng-controller="BlogCtrl" >
+      <div class="row">
+                <a ng-href="blog/{{l._id}}"  class="shadow-sm col-6 rounded card" ng-repeat="l in list">
+
+                      <p style="height:70px" class="h5 align-self-center overflow-hidden">{{l.blogname}}</p>
+                      <p class="align-self-end">by:{{l.author_name}}  {{l.time}}</p>
+
+                </a>
+              </div>
+              <hr>
+                <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item">
+                            <button type="button" class="page-link" ng-click="pagedown()" ng-disabled="pagemin">Previous</button>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">第{{page}}页，共{{maxpage}}页</a></li>
+                          <li class="page-item">
+                            <button type="button" class="page-link" ng-click="pageup()" ng-disabled="pagemax">Next</button>
+                          </li>
+                        </ul>
+                      </nav>
+    </div>
+</div>

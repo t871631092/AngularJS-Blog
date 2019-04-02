@@ -1,0 +1,63 @@
+<div  ng-controller="resumeCtrl">
+
+    <div class="p-2">
+        <img style="background-color:antiquewhite;">
+        <!--
+        <div>
+            <button type="button" class="btn btn-primary" ng-click="changeicon()">更换头像</button>
+        </div>-->
+        <table class="table" data-toggle="table" ng-show="resumeshow">
+           <tr>
+                <th>ID</th>
+                <td>{{profile.username}}</td>
+            </tr>
+            <tr>
+                <th>昵称</th>
+                <td>{{profile.name}}</td>
+            </tr>
+            <tr>
+                <th>生日</th>
+                <td>{{profile.birth}}</td>
+            </tr>
+            <tr>
+                <th>地区</th>
+                <td>{{profile.region}}</td>
+            </tr>
+            <tr>
+                <th>简介</th>
+                <td>{{profile.sign}}</td>
+            </tr>
+        </table>
+        <form>
+            <table class="table" data-toggle="table" ng-hide="resumeshow">
+                <tr>
+                     <th>ID</th>
+                     <td>{{profile.username}}</td>
+                </tr>
+                <tr>
+                     <th>昵称</th>
+                     <td><input type="text" class="form-control" ng-model="profile.name"></td>
+                </tr>
+                <tr>
+                     <th>生日</th>
+
+                    <td><input type="date" class="form-control" placeholder="yyyy/mm/dd" ng-model="profile.birth"></td>
+                  
+                </tr>
+                <tr>
+                     <th>地区</th>
+                     <td><input type="text" class="form-control" ng-model="profile.region"></td>
+                </tr>
+                <tr>
+                    <th>简介</th>
+                    <td><input type="text" class="form-control" ng-model="profile.sign"></td>
+                </tr>
+            </table> 
+        </form>
+        <br>
+        <button type="button" class="btn btn-primary" ng-click="changeresume()">
+                {{changeorsave}}
+            </button>
+
+        </div>
+</div>

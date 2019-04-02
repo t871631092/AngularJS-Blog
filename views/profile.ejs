@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%= title%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+    <script src="javascripts/angular.min.js"></script>
+    <script src="javascripts/angular-resource.min.js"></script>
+    <script src="javascripts/angular-route.min.js"></script>
+    <script src="javascripts/angular-animate.js"></script>
+    <script src="javascripts/angular-sanitize.js"></script>
+    <script src="javascripts/zoomctrl.js"></script>
+    <script src="javascripts/ui-bootstrap-tpls.min.js"></script>
+</head>
+<body ng-app="myapp">
+    <br>
+    <div class="container  ">
+        <div class="text-center">
+            <h3>个人空间</h3>
+            <hr>
+        </div>
+        <div class="row">
+             <div class="col-2" ng-controller="navCtrl">
+                 <br>
+                   <div class="list-group">
+                            <a class="list-group-item list-group-item-action" ng-href="#!/index">首页</a>
+                          <a class="list-group-item list-group-item-action" ng-href="#!/home">博客</a>
+                         <a class="list-group-item list-group-item-action" ng-href="#!/resume">个人资料</a>
+                         <a class="list-group-item list-group-item-action" ng-href="#!/changepassword">重置密码</a>
+                         <a class="list-group-item list-group-item-action" ng-href="logout">注销</a>
+                    </div>
+            </div>
+            <div class="col-10 align-self-center" style="text-align:center" ng-view>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

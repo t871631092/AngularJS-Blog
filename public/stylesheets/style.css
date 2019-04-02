@@ -1,0 +1,49 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  grid-template-rows: 0.2fr 1.8fr;
+  grid-template-areas: "title title" "blog login";
+}
+
+.title { grid-area: title; 
+text-align: center;
+}
+
+.blog { grid-area: blog; }
+
+.login { height: 250px; }
+
+.p-1{
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  margin: 10% auto;
+  
+}
+.p-2{
+  text-align: center;
+  width: 300px;
+  height: 500px;
+  margin: 10% auto;
+  font-size: 1.2em;
+}
+.p-2 table{
+  height: 200px;
+}
+.profile {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 0.1fr 1.9fr;
+    grid-template-areas: "title title" "pnav content";
+  }
+  
+  .pnav { grid-area: pnav;}
+  .pnav a{font-size: 1.25em;}
+  
+  .content { grid-area: content; }
+
+a{ color: black;}
+
+li{
+  list-style: none;
+}
